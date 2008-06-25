@@ -1,0 +1,71 @@
+adns
+------------------------------------------
+adns is a resolver library for C (and C++) programs, and a collection 
+of useful DNS resolver utilities.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+
+Build requirements:
+(besides corresponding -devel packages)
+  binutils-20080523-1
+  cygport-0.3.11-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.chiark.greenend.org.uk/~ian/adns/
+
+Canonical download:
+  http://www.chiark.greenend.org.uk/~ian/adns/ftp/
+
+-------------------------------------------
+
+Build instructions:
+  unpack adns-1.4-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./adns-1.4-X.cygport all
+
+This will create:
+  /usr/src/adns-1.4-X-src.tar.bz2
+  /usr/src/adns-1.4-X.tar.bz2
+  /usr/src/libadns-devel-1.4-X.tar.bz2
+  /usr/src/libadns1-1.4-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(adns)
+  /usr/bin/adnsheloex.exe
+  /usr/bin/adnshost.exe
+  /usr/bin/adnslogres.exe
+  /usr/bin/adnsresfilter.exe
+  /usr/share/doc/adns-1.4/COPYING
+  /usr/share/doc/adns-1.4/ChangeLog
+  /usr/share/doc/adns-1.4/INSTALL
+  /usr/share/doc/adns-1.4/README
+  /usr/share/doc/adns-1.4/TODO
+
+(libadns1)
+  /usr/bin/cygadns-1.dll
+
+(libadns-devel)
+  /usr/include/adns.h
+  /usr/lib/libadns.a
+  /usr/lib/libadns.dll.a
+
+------------------
+
+Port Notes:
+
+----- version 1.4-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
