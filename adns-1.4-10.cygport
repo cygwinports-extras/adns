@@ -1,13 +1,13 @@
 DESCRIPTION="DNS resolver library and utilities"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~ian/adns/"
 SRC_URI="http://www.chiark.greenend.org.uk/~ian/adns/ftp/${P}.tar.gz"
+PATCH_URI="1.4-vpath.patch
+           1.4-cygwin-install.patch"
 
-abi=1
-PKG_NAMES="${PN} lib${PN}${abi} lib${PN}-devel"
-PKG_HINTS="setup lib devel"
-PKG_CONTENTS[0]="usr/bin/*.exe usr/share/"
-PKG_CONTENTS[1]="usr/bin/*-${abi}.dll"
-PKG_CONTENTS[2]="usr/include/ usr/lib/"
+PKG_NAMES="${PN} lib${PN}1 lib${PN}-devel"
+adns_CONTENTS="usr/bin/*.exe usr/share/"
+libadns1_CONTENTS="usr/bin/cygadns-1.dll"
+libadns_devel_CONTENTS="usr/include/ usr/lib/"
 
 DIFF_EXCLUDES="Makefile"
 
@@ -16,6 +16,7 @@ src_compile() {
 	cygconf
 	cygmake \
 		MKSHLIB_1='$(CC) $(LDFLAGS) -shared -Wl,--enable-auto-image-base,--out-implib,libadns.dll.a -o' \
+		MKSHLIB_3=  \
 		SHLIBFILE='cygadns-$(MAJOR).dll' \
 		SHLIBFORLINK=  \
 		SHLIBSONAME=  \

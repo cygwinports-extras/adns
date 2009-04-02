@@ -4,15 +4,16 @@ adns is a resolver library for C (and C++) programs, and a collection
 of useful DNS resolver utilities.
 
 Runtime requirements:
-  cygwin-1.5.25-15
+  cygwin-1.7.0-44
+  libgcc1-4.3.2-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  binutils-20080523-1
-  cygport-0.3.11-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  make-3.81-1
+  binutils-20080624-2
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  make-3.81-2
   sed-4.1.5-2
 
 Canonical website:
@@ -45,11 +46,10 @@ Files included in the binary packages:
   /usr/bin/adnshost.exe
   /usr/bin/adnslogres.exe
   /usr/bin/adnsresfilter.exe
-  /usr/share/doc/adns-1.4/COPYING
-  /usr/share/doc/adns-1.4/ChangeLog
-  /usr/share/doc/adns-1.4/INSTALL
-  /usr/share/doc/adns-1.4/README
-  /usr/share/doc/adns-1.4/TODO
+  /usr/share/doc/adns/COPYING
+  /usr/share/doc/adns/ChangeLog
+  /usr/share/doc/adns/README
+  /usr/share/doc/adns/TODO
 
 (libadns1)
   /usr/bin/cygadns-1.dll
@@ -63,8 +63,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 1.4-1 -----
-Initial release for Cygwin.
+----- version 1.4-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

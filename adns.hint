@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libadns1
+requires: cygwin libadns1 libgcc1
 sdesc: "DNS resolver utilities"
 ldesc: "adns is a resolver library for C (and C++) programs, and a 
 collection of useful DNS resolver utilities."

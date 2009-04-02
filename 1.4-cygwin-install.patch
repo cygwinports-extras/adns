@@ -1,0 +1,16 @@
+--- origsrc/adns-1.4/dynamic/Makefile.in	2006-05-10 05:58:02.000000000 -0500
++++ src/adns-1.4/dynamic/Makefile.in	2008-06-24 19:35:52.562500000 -0500
+@@ -30,10 +30,10 @@
+ ALLOBJS=	$(addsuffix _p.o, $(basename $(LIBOBJS)))
+ 
+ install:
++		mkdir -p $(bindir)
+ 		mkdir -p $(libdir)
+-		$(INSTALL_PROGRAM) $(SHLIBFILE) $(libdir)/$(SHLIBFILE)
+-		ln -sf $(SHLIBFILE) $(libdir)/$(SHLIBSONAME)
+-		ln -sf $(SHLIBSONAME) $(libdir)/$(SHLIBFORLINK)
++		$(INSTALL_PROGRAM) $(SHLIBFILE) $(bindir)/$(SHLIBFILE)
++		$(INSTALL_PROGRAM) $(SHLIBFORLINK) $(libdir)/$(SHLIBFORLINK)
+ 
+ uninstall:
+ 		rm -f $(libdir)/$(SHLIBFILE) $(libdir)/$(SHLIBSONAME)

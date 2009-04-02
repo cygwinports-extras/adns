@@ -22,7 +22,7 @@
  
 --- origsrc/adns-1.4/dynamic/Makefile.in	2006-05-10 05:58:02.000000000 -0500
 +++ src/adns-1.4/dynamic/Makefile.in	2008-06-24 19:35:52.562500000 -0500
-@@ -24,16 +24,16 @@
+@@ -24,7 +24,7 @@
  VPATH=		@srcdir@
  
  TARGETS=	$(SHLIBFILE) $(SHLIBSONAME) $(SHLIBFORLINK)
@@ -31,18 +31,6 @@
  include		$(srcdir)/../src/adns.make
  
  ALLOBJS=	$(addsuffix _p.o, $(basename $(LIBOBJS)))
- 
- install:
-+		mkdir -p $(bindir)
- 		mkdir -p $(libdir)
--		$(INSTALL_PROGRAM) $(SHLIBFILE) $(libdir)/$(SHLIBFILE)
--		ln -sf $(SHLIBFILE) $(libdir)/$(SHLIBSONAME)
--		ln -sf $(SHLIBSONAME) $(libdir)/$(SHLIBFORLINK)
-+		$(INSTALL_PROGRAM) $(SHLIBFILE) $(bindir)/$(SHLIBFILE)
-+		$(INSTALL_PROGRAM) $(SHLIBFORLINK) $(libdir)/$(SHLIBFORLINK)
- 
- uninstall:
- 		rm -f $(libdir)/$(SHLIBFILE) $(libdir)/$(SHLIBSONAME)
 --- origsrc/adns-1.4/regress/Makefile.in	2006-04-08 09:36:57.000000000 -0500
 +++ src/adns-1.4/regress/Makefile.in	2008-06-24 19:13:24.921875000 -0500
 @@ -28,12 +28,12 @@
