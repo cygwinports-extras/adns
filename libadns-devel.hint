@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libadns1
+requires: libadns1
 external-source: adns
 sdesc: "DNS resolver library (development)"
 ldesc: "adns is a resolver library for C (and C++) programs, and a 

@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libgcc1
+requires: libgcc1
 external-source: adns
 sdesc: "DNS resolver library (runtime)"
 ldesc: "adns is a resolver library for C (and C++) programs, and a 
